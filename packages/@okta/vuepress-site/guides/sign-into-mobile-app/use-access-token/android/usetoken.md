@@ -8,7 +8,7 @@ private void callMessagesApi() {
     HashMap<String, String> postParameters = new HashMap<>();
     postParameters.put("postparam", "postparam");
 
-    client.authorizedRequest(uri, properties, postParameters, HttpConnection.RequestMethod.POST,
+    sessionClient.authorizedRequest(uri, properties, postParameters, HttpConnection.RequestMethod.POST,
         new RequestCallback<JSONObject, AuthorizationException>() {
             @Override
             public void onSuccess(@NonNull JSONObject result) {
